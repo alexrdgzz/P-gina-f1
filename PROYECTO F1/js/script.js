@@ -1,14 +1,20 @@
 function mostrarInfo(id) {
     const parrafo = document.getElementById(id);
-    
-    if (parrafo.style.display === "none" || parrafo.style.display === "") {
+
+    if (parrafo.style.display === "none"  parrafo.style.display === "") {
         parrafo.style.display = "block";
+        parrafo.style.opacity = 0;
+        setTimeout(() => {
+            parrafo.style.opacity = 1;
+        }, 10);
     } else {
-        parrafo.style.display = "none";
+        parrafo.style.opacity = 0;
+        setTimeout(() => {
+            parrafo.style.display = "none";
+        }, 300);
     }
 }
 
-// Validación básica del formulario
 document.addEventListener("DOMContentLoaded", () => {
     const form = document.querySelector("form");
 
@@ -17,8 +23,8 @@ document.addEventListener("DOMContentLoaded", () => {
         const email = document.getElementById("email").value.trim();
         const mensaje = document.getElementById("mensaje").value.trim();
 
-        if (!nombre || !email || !mensaje) {
-            e.preventDefault(); // Evita que se envíe el formulario
+        if (!nombre  !email || !mensaje) {
+            e.preventDefault(); 
             alert("Por favor, rellena todos los campos.");
         }
     });
