@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F1 Fan Page</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <img src="img/logo-f1.png" alt="Logo F1" class="logo">
+        <h1>F1 Fan Page</h1>
+        <nav>
+            <ul>
+                <li><a href="#pilotos">Pilotos</a></li>
+                <li><a href="#equipos">Equipos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="pilotos">
+            <h2>Pilotos Destacados</h2>
+            <div class="piloto">
+                <img src="img/verstappen.jpg" alt="Max Verstappen">
+                <h3>Max Verstappen</h3>
+                <button onclick="mostrarInfo('info1')">Ver más info</button>
+                <p id="info1" class="info-oculta">Piloto de Red Bull Racing, campeón mundial 2021, 2022 y 2023.</p>
+            </div>
+            <div class="piloto">
+                <img src="img/leclerc.jpg" alt="Charles Leclerc">
+                <h3>Charles Leclerc</h3>
+                <button onclick="mostrarInfo('info2')">Ver más info</button>
+                <p id="info2" class="info-oculta">Piloto de Ferrari, joven promesa con gran talento y velocidad.</p>
+            </div>
+        </section>
+
+        <section id="equipos">
+            <h2>Equipos Principales</h2>
+            <ul>
+                <li>Red Bull Racing</li>
+                <li>Ferrari</li>
+                <li>Mercedes-AMG Petronas</li>
+                <li>McLaren</li>
+            </ul>
+        </section>
+
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <form>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 F1 Fan Page</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
